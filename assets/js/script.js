@@ -40,13 +40,13 @@ function proceso() {
         let jugador = parseInt(document.querySelector(".input").value);
         switch (jugador) {
             case 1:
-                moveJugador.innerHTML = "🥌 piedra";
+                moveJugador.innerHTML = "🥌<br>piedra";
                 break;
             case 2:
-                moveJugador.innerHTML = "🧻 papel";
+                moveJugador.innerHTML = "🧻<br>papel";
                 break;
             case 3:
-                moveJugador.innerHTML = "✂ tijera";
+                moveJugador.innerHTML = "✂<br>tijera";
                 break;
             default:
                 moveJugador.innerHTML = " ";
@@ -56,13 +56,13 @@ function proceso() {
         let computador = Math.floor(Math.random() * 3)+1;
         switch (computador) {
             case 1:
-                moveComputadora.innerHTML = "🥌 piedra";
+                moveComputadora.innerHTML = "🥌<br>piedra";
                 break;
             case 2:
-                moveComputadora.innerHTML = "🧻 papel";
+                moveComputadora.innerHTML = "🧻<br>papel";
                 break;
             case 3:
-                moveComputadora.innerHTML = "✂ tijera";
+                moveComputadora.innerHTML = "✂<br>tijera";
                 break;
             default:
                 moveComputadora.innerHTML = " ";
@@ -70,15 +70,15 @@ function proceso() {
         }
 
         if ((jugador == 1 && computador == 2) || (jugador == 2 && computador == 3) || (jugador == 3 && computador == 1)) {
-            resultado. innerHTML ="Perdiste! 😔";
+            resultado. innerHTML ="Perdiste!<br>😔";
             perdidas++;
             scorePerdidas.innerHTML = perdidas;
         } else if ((jugador == 1 && computador == 3) || (jugador == 2 && computador == 1) || (jugador == 3 && computador == 2)) {
-            resultado. innerHTML = "Ganaste! 😃";
+            resultado. innerHTML = "Ganaste!<br>😃";
             ganadas++;
             scoreGanadas.innerHTML = ganadas;
         } else if (jugador == computador) {
-            resultado. innerHTML = "Empate! 😐";
+            resultado. innerHTML = "Empate!<br>😐";
             empates++;
             scoreEmpates.innerHTML = empates;
         }

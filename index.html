@@ -13,15 +13,24 @@
                 <button class="rondas__btn btn" onclick="rondas()" id="rondasBtn">
                     ¿Cuántas rondas quieres jugar?
                 </button>
-                <p class="rondas__veredicto" id="rondasVeredicto"> </p>
+                <p class="rondas__veredicto" id="rondasVeredicto"></p>
             </div>
             <div class="jugadas__container">
                 <div class="jugadas" id="jugadas">
                     <h3 class="jugadas__title">Escoge tu jugada:</h3>
                     <div class="jugadas__botones">
-                        <button onclick="jugar(event)" value="1" class="input btn btn--move">🥌<br> piedra</button>
-                        <button onclick="jugar(event)" value="2" class="input btn btn--move">🧻<br> papel</button>
-                        <button onclick="jugar(event)" value="3" class="input btn btn--move">✂<br> tijera</button>
+                        <button onclick="jugar(event)" value="1" class="input btn btn--move">
+                            🥌<br />
+                            piedra
+                        </button>
+                        <button onclick="jugar(event)" value="2" class="input btn btn--move">
+                            🧻<br />
+                            papel
+                        </button>
+                        <button onclick="jugar(event)" value="3" class="input btn btn--move">
+                            ✂<br />
+                            tijera
+                        </button>
                     </div>
                 </div>
             </div>
@@ -39,11 +48,13 @@
                     <p class="juego__move" id="resultado"></p>
                 </div>
             </div>
-            
+
             <section class="main__botones-tablero">
                 <div class="main__botones">
                     <!-- <button onclick="jugar()">Jugar</button> -->
-                    <button onclick="reset()" class="btn main__botones-reset" id="reset" disabled>Jugar de nuevo :D</button>
+                    <button onclick="reset()" class="btn main__botones-reset" id="reset" disabled>
+                        Jugar de nuevo 😀
+                    </button>
                 </div>
                 <div class="tablero">
                     <p class="tablero__text">Intentos: <span id="attempts">0</span></p>
