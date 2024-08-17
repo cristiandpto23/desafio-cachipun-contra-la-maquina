@@ -8,45 +8,58 @@
     </head>
     <body>
         <main class="main">
-            <h1 class="main__title">Cachipún</h1>
+            <h1 class="main__title">Cachipún against the machine</h1>
             <div class="rondas">
-                <button onclick="rondas()" id="rondasBtn">¿Cuántas rondas quieres jugar?</button>
-                <p class="rondas__veredicto" id="rondas__veredicto"></p>
+                <button class="rondas__btn btn" onclick="rondas()" id="rondasBtn">
+                    ¿Cuántas rondas quieres jugar?
+                </button>
+                <p class="rondas__veredicto" id="rondasVeredicto"> </p>
             </div>
-            <div class="jugadas" id="jugadas">
-                <h3 class="jugadas__title">Escoge tu jugada:</h3>
-                <div class="jugadas__botones">
-                    <button onclick="jugar(event)" value="1" class="input">🥌 piedra</button>
-                    <button onclick="jugar(event)" value="2" class="input">🧻 papel</button>
-                    <button onclick="jugar(event)" value="3" class="input">✂ tijera</button>
+            <div class="jugadas__container">
+                <div class="jugadas" id="jugadas">
+                    <h3 class="jugadas__title">Escoge tu jugada:</h3>
+                    <div class="jugadas__botones">
+                        <button onclick="jugar(event)" value="1" class="input btn btn--move">🥌<br> piedra</button>
+                        <button onclick="jugar(event)" value="2" class="input btn btn--move">🧻<br> papel</button>
+                        <button onclick="jugar(event)" value="3" class="input btn btn--move">✂<br> tijera</button>
+                    </div>
                 </div>
-            </div>    
+            </div>
             <div class="juego">
                 <div class="juego__info">
-                    <h2>Jugador</h2>
-                    <p id="movidaJugador"></p>
+                    <h2 class="juego__title">Jugador</h2>
+                    <p class="juego__move" id="movidaJugador"></p>
                 </div>
                 <div class="juego__info">
-                    <h2>Computadora</h2>
-                    <p id="movidaComputadora"></p>
+                    <h2 class="juego__title">Computadora</h2>
+                    <p class="juego__move" id="movidaComputadora"></p>
                 </div>
                 <div class="juego__info">
-                    <h2>Resultado</h2>
-                    <p id="resultado"></p>
+                    <h2 class="juego__title">Resultado</h2>
+                    <p class="juego__move" id="resultado"></p>
                 </div>
             </div>
-
-            <div class="main__botones">
-                <!-- <button onclick="jugar()">Jugar</button> -->
-                <button onclick="reset()" class="main__botones-reset" id="reset">Jugar de nuevo :D</button>
-            </div>
-            <div class="tablero">
-                <p class="tablero__text">Intentos: <span id="attempts">0</span></p>
-                <p class="tablero__text">Ganadas: <span id="wins">0</span></p>
-                <p class="tablero__text">Perdidas: <span id="losses">0</span></p>
-                <p class="tablero__text">Empates: <span id="draws">0</span></p>
-            </div>
+            
+            <section class="main__botones-tablero">
+                <div class="main__botones">
+                    <!-- <button onclick="jugar()">Jugar</button> -->
+                    <button onclick="reset()" class="btn main__botones-reset" id="reset" disabled>Jugar de nuevo :D</button>
+                </div>
+                <div class="tablero">
+                    <p class="tablero__text">Intentos: <span id="attempts">0</span></p>
+                    <p class="tablero__text">Ganadas: <span id="wins">0</span></p>
+                    <p class="tablero__text">Perdidas: <span id="losses">0</span></p>
+                    <p class="tablero__text">Empates: <span id="draws">0</span></p>
+                </div>
+            </section>
         </main>
+
+        <footer class="footer">
+            <p>
+                © 2024 | Hecho con ❤️ por
+                <a href="https://github.com/cristiandpto23" target="_blank" rel="noopener noreferrer">cristiandpto23</a>
+            </p>
+        </footer>
 
         <script src="./assets/js/script.js"></script>
     </body>

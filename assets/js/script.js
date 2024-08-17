@@ -16,7 +16,7 @@ let scoreIntentos = document.getElementById("attempts");
 let resultado = document.getElementById("resultado");
 let moveJugador = document.getElementById("movidaJugador");
 let moveComputadora = document.getElementById("movidaComputadora");
-let scoreGlobal = document.getElementById("rondas__veredicto")
+let scoreGlobal = document.getElementById("rondasVeredicto")
 let rondasBtn = document.getElementById("rondasBtn");
 let jugadasContainer = document.getElementById("jugadas")
 let resetBtn = document.getElementById("reset");
@@ -99,15 +99,16 @@ function proceso() {
 function final() {
     if (intentos === 0) {
         if (ganadas > perdidas) {
-            scoreFinal = "ganaste el juego!<br> 🎉";
+            scoreFinal = "ganaste el juego! 🎉";
         } else if (perdidas > ganadas) {
-            scoreFinal = "perdiste el juego!<br> 😢";
+            scoreFinal = "perdiste el juego! 😢";
         } else {
-            scoreFinal = "empataste el juego<br> 😐";
+            scoreFinal = "empataste el juego 😐";
         }
         scoreGlobal.innerHTML = `Se acabaron los intentos,<br>ya ${scoreFinal}`;
         jugadasContainer.style.display = "none";
-        resetBtn.style.display = "block";
+        resetBtn.removeAttribute("disabled");
+        /* resetBtn.style.display = "block"; */
         return
     }
 }
@@ -124,7 +125,7 @@ function reset() {
     jugadasContainer.style.display = "block";
     scoreGlobal.innerHTML = ` `;
     console.log(ganadas, perdidas, empates);
-    resetBtn.style.display = "none";
+    resetBtn.setAttribute("disabled");
 }
 
 console.log(ganadas, perdidas, empates);
