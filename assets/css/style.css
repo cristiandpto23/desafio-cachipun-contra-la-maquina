@@ -8,12 +8,14 @@
 }
 
 
-.jugadas__contenedor {
+.jugadas__title {
+    text-align: center;
+}
+.jugadas__botones {
     margin: 25px 0;
     display: flex;
     gap: 25px;
 }
-
 
 .juego {
     display: flex;
