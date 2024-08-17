@@ -8,17 +8,19 @@
     </head>
     <body>
         <main class="main">
-            <h1>Cachipún</h1>
+            <h1 class="main__title">Cachipún</h1>
             <div class="rondas">
-                <button onclick="rondas()">¿Cuántas rondas quieres jugar?</button>
+                <button onclick="rondas()" id="rondasBtn">¿Cuántas rondas quieres jugar?</button>
+                <p class="rondas__veredicto" id="rondas__veredicto"></p>
             </div>
-
-            <div>Escoge tu jugada:</div>
-            <div class="jugadas__contenedor">
-                <button onclick="jugar()" value="1" class="input">🥌 piedra</button>
-                <button onclick="jugar()" value="2" class="input">🧻 papel</button>
-                <button onclick="jugar()" value="3" class="input">✂ tijera</button>
-            </div>
+            <div class="jugadas" id="jugadas">
+                <h3 class="jugadas__title">Escoge tu jugada:</h3>
+                <div class="jugadas__botones">
+                    <button onclick="jugar(event)" value="1" class="input">🥌 piedra</button>
+                    <button onclick="jugar(event)" value="2" class="input">🧻 papel</button>
+                    <button onclick="jugar(event)" value="3" class="input">✂ tijera</button>
+                </div>
+            </div>    
             <div class="juego">
                 <div class="juego__info">
                     <h2>Jugador</h2>
@@ -34,9 +36,9 @@
                 </div>
             </div>
 
-            <div class="botones">
+            <div class="main__botones">
                 <!-- <button onclick="jugar()">Jugar</button> -->
-                <button onclick="reset()">Jugar de nuevo :D</button>
+                <button onclick="reset()" class="main__botones-reset" id="reset">Jugar de nuevo :D</button>
             </div>
             <div class="tablero">
                 <p class="tablero__text">Intentos: <span id="attempts">0</span></p>
