@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cachipún</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <main class="main">
+            <h1>Cachipún</h1>
+            <div class="rondas">
+                <button onclick="rondas()">¿Cuántas rondas quieres jugar?</button>
+            </div>
+
+            <div>Escoge tu jugada:</div>
+            <div class="jugadas__contenedor">
+                <button onclick="jugar()" value="1" class="input">🥌 piedra</button>
+                <button onclick="jugar()" value="2" class="input">🧻 papel</button>
+                <button onclick="jugar()" value="3" class="input">✂ tijera</button>
+            </div>
+            <div class="juego">
+                <div class="juego__info">
+                    <h2>Jugador</h2>
+                    <p id="movidaJugador"></p>
+                </div>
+                <div class="juego__info">
+                    <h2>Computadora</h2>
+                    <p id="movidaComputadora"></p>
+                </div>
+                <div class="juego__info">
+                    <h2>Resultado</h2>
+                    <p id="resultado"></p>
+                </div>
+            </div>
+
+            <div class="botones">
+                <!-- <button onclick="jugar()">Jugar</button> -->
+                <button onclick="reset()">Jugar de nuevo :D</button>
+            </div>
+            <div class="tablero">
+                <p class="tablero__text">Intentos: <span id="attempts">0</span></p>
+                <p class="tablero__text">Ganadas: <span id="wins">0</span></p>
+                <p class="tablero__text">Perdidas: <span id="losses">0</span></p>
+                <p class="tablero__text">Empates: <span id="draws">0</span></p>
+            </div>
+        </main>
+
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
