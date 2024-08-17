@@ -1,12 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    min-width: fit-content;
+    height: 2rem;
+    min-height: fit-content;
+    margin: 15px;
+    padding: 1rem 1.4rem 2rem 1.4rem;
+    border: 1px solid #330;
+    border-radius: 15px;
+    background-color: papayawhip;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* MAIN */
 .main {
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    gap: 8px;
     background-color: #f1f1f1;
 }
 
+.main__title {
+    margin-bottom: 15px;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+/* MAIN VEREDICTOS */
+.rondas {
+    width: 340px;
+    height: 100px;
+    background-color: darksalmon;
+    border-radius: 20px;
+    text-align: center;
+    
+
+    align-items: center;
+}
+
+.rondas__veredicto {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* MAIN JUGADAS */
+.jugadas__container {
+    width: 350px;
+    height: 115px;
+    background-color: darkseagreen;
+    border-radius: 25px;
+}
 .jugadas {
     display: none;
 }
@@ -15,12 +71,108 @@
     text-align: center;
 }
 .jugadas__botones {
-    margin: 25px 0;
+    margin: 2px 0;
     display: flex;
-    gap: 25px;
+    justify-content: center;
+}
+.btn--move {
+    height: 3.5rem;
+    padding: 0rem 1.4rem 0rem 1.4rem;
 }
 
+/* MAIN JUEGO */
 .juego {
+    width: 350px;
+    height: 100px;
+    background-color: cadetblue;
+    border-radius: 25px;
     display: flex;
-    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+
+}
+.juego__info {
+    border-left: 1px solid #333;
+    padding: 0 0px 0 8px;
+    text-align: center;
+}
+.juego__info:first-child {
+    border: none;
+}
+.juego__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.juego__move {
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin: 8px 0;
+    line-height: 2;
+}
+
+
+
+/* BOTONES TABLERO */
+.main__botones-tablero {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* botones reset*/
+.main__botones {
+    width: 49%;
+}
+.main__botones-reset {
+    height: fit-content;
+    padding: 1.4rem 0.4rem 1.4rem 0.4rem;
+    box-shadow: 2px 2px 5px #333;
+}
+/* tablero*/
+.tablero {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.tablero__text {
+    padding: 6px 15px;
+    border-bottom: 1px solid #333;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+
+    & span {
+        font-weight: normal;
+    }
+}
+.tablero__text:last-child {
+    border: none;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
 }

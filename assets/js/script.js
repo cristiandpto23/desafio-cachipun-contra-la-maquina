@@ -16,7 +16,7 @@ let scoreIntentos = document.getElementById("attempts");
 let resultado = document.getElementById("resultado");
 let moveJugador = document.getElementById("movidaJugador");
 let moveComputadora = document.getElementById("movidaComputadora");
-let scoreGlobal = document.getElementById("rondas__veredicto")
+let scoreGlobal = document.getElementById("rondasVeredicto")
 let rondasBtn = document.getElementById("rondasBtn");
 let jugadasContainer = document.getElementById("jugadas")
 let resetBtn = document.getElementById("reset");
@@ -40,13 +40,13 @@ function proceso() {
         let jugador = parseInt(document.querySelector(".input").value);
         switch (jugador) {
             case 1:
-                moveJugador.innerHTML = "🥌 piedra";
+                moveJugador.innerHTML = "🥌<br>piedra";
                 break;
             case 2:
-                moveJugador.innerHTML = "🧻 papel";
+                moveJugador.innerHTML = "🧻<br>papel";
                 break;
             case 3:
-                moveJugador.innerHTML = "✂ tijera";
+                moveJugador.innerHTML = "✂<br>tijera";
                 break;
             default:
                 moveJugador.innerHTML = " ";
@@ -56,13 +56,13 @@ function proceso() {
         let computador = Math.floor(Math.random() * 3)+1;
         switch (computador) {
             case 1:
-                moveComputadora.innerHTML = "🥌 piedra";
+                moveComputadora.innerHTML = "🥌<br>piedra";
                 break;
             case 2:
-                moveComputadora.innerHTML = "🧻 papel";
+                moveComputadora.innerHTML = "🧻<br>papel";
                 break;
             case 3:
-                moveComputadora.innerHTML = "✂ tijera";
+                moveComputadora.innerHTML = "✂<br>tijera";
                 break;
             default:
                 moveComputadora.innerHTML = " ";
@@ -70,15 +70,15 @@ function proceso() {
         }
 
         if ((jugador == 1 && computador == 2) || (jugador == 2 && computador == 3) || (jugador == 3 && computador == 1)) {
-            resultado. innerHTML ="Perdiste! 😔";
+            resultado. innerHTML ="Perdiste!<br>😔";
             perdidas++;
             scorePerdidas.innerHTML = perdidas;
         } else if ((jugador == 1 && computador == 3) || (jugador == 2 && computador == 1) || (jugador == 3 && computador == 2)) {
-            resultado. innerHTML = "Ganaste! 😃";
+            resultado. innerHTML = "Ganaste!<br>😃";
             ganadas++;
             scoreGanadas.innerHTML = ganadas;
         } else if (jugador == computador) {
-            resultado. innerHTML = "Empate! 😐";
+            resultado. innerHTML = "Empate!<br>😐";
             empates++;
             scoreEmpates.innerHTML = empates;
         }
@@ -99,15 +99,16 @@ function proceso() {
 function final() {
     if (intentos === 0) {
         if (ganadas > perdidas) {
-            scoreFinal = "ganaste el juego!<br> 🎉";
+            scoreFinal = "ganaste el juego! 🎉";
         } else if (perdidas > ganadas) {
-            scoreFinal = "perdiste el juego!<br> 😢";
+            scoreFinal = "perdiste el juego! 😢";
         } else {
-            scoreFinal = "empataste el juego<br> 😐";
+            scoreFinal = "empataste el juego 😐";
         }
         scoreGlobal.innerHTML = `Se acabaron los intentos,<br>ya ${scoreFinal}`;
         jugadasContainer.style.display = "none";
-        resetBtn.style.display = "block";
+        resetBtn.removeAttribute("disabled");
+        /* resetBtn.style.display = "block"; */
         return
     }
 }
@@ -124,7 +125,7 @@ function reset() {
     jugadasContainer.style.display = "block";
     scoreGlobal.innerHTML = ` `;
     console.log(ganadas, perdidas, empates);
-    resetBtn.style.display = "none";
+    resetBtn.setAttribute("disabled");
 }
 
 console.log(ganadas, perdidas, empates);
