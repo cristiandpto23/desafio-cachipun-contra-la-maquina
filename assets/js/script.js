@@ -125,7 +125,7 @@ function reset() {
     jugadasContainer.style.display = "block";
     scoreGlobal.innerHTML = ` `;
     console.log(ganadas, perdidas, empates);
-    resetBtn.setAttribute("disabled");
+    resetBtn.setAttribute("disabled", 'true');
 }
 
 console.log(ganadas, perdidas, empates);
