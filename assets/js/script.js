@@ -26,6 +26,7 @@ function rondas() {
     intentos = prompt("¿Cuántas veces quieres jugar?");
     scoreIntentos.innerHTML = intentos;
     rondasBtn.style.display = "none";
+    jugadasContainer.style.display = "block";
 }
 
 function jugar() {

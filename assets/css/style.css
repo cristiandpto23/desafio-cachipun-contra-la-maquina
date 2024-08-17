@@ -7,6 +7,9 @@
     background-color: #f1f1f1;
 }
 
+.jugadas {
+    display: none;
+}
 
 .jugadas__title {
     text-align: center;
