@@ -42,7 +42,7 @@ function jugarDos() {
 }
 
 function jugarTres() {
-    jugador = parseInt(document.querySelector(".input-3git").value);
+    jugador = parseInt(document.querySelector(".input-3").value);
     final();
     proceso();
 }
