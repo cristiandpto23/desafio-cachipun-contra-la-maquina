@@ -147,6 +147,9 @@ function reset() {
     scoreGlobal.innerHTML = ` `;
     console.log(ganadas, perdidas, empates);
     resetBtn.setAttribute("disabled", 'true');
+    moveJugador.innerHTML = " ";
+    moveComputadora.innerHTML = " ";
+    resultado. innerHTML = " ";
 }
 
 console.log(ganadas, perdidas, empates);
