@@ -20,7 +20,7 @@ let scoreGlobal = document.getElementById("rondasVeredicto")
 let rondasBtn = document.getElementById("rondasBtn");
 let jugadasContainer = document.getElementById("jugadas")
 let resetBtn = document.getElementById("reset");
-
+let jugador = 0;
 
 function rondas() {
     intentos = prompt("¿Cuántas veces quieres jugar?");
@@ -29,45 +29,66 @@ function rondas() {
     jugadasContainer.style.display = "block";
 }
 
-function jugar() {
+function jugarUno() {
+    jugador = parseInt(document.querySelector(".input-1").value);
     final();
     proceso();
+}
+
+function jugarDos() {
+    jugador = parseInt(document.querySelector(".input-2").value);
+    final();
+    proceso();
+}
+
+function jugarTres() {
+    jugador = parseInt(document.querySelector(".input-3git").value);
+    final();
+    proceso();
+}
+
+function jugadorMovimiento() {
+    switch (jugador) {
+        case 1:
+            moveJugador.innerHTML = "🥌<br>piedra";
+            break;
+        case 2:
+            moveJugador.innerHTML = "🧻<br>papel";
+            break;
+        case 3:
+            moveJugador.innerHTML = "✂<br>tijera";
+            break;
+        default:
+            moveJugador.innerHTML = " ";
+            break;
+    }
+}
+
+function computadorMovimiento(move) {
+    switch (move) {
+        case 1:
+            moveComputadora.innerHTML = "🥌<br>piedra";
+            break;
+        case 2:
+            moveComputadora.innerHTML = "🧻<br>papel";
+            break;
+        case 3:
+            moveComputadora.innerHTML = "✂<br>tijera";
+            break;
+        default:
+            moveComputadora.innerHTML = " ";
+            break;
+    }
 }
 
 function proceso() {
     if (intentos > 0) {
     
-        let jugador = parseInt(document.querySelector(".input").value);
-        switch (jugador) {
-            case 1:
-                moveJugador.innerHTML = "🥌<br>piedra";
-                break;
-            case 2:
-                moveJugador.innerHTML = "🧻<br>papel";
-                break;
-            case 3:
-                moveJugador.innerHTML = "✂<br>tijera";
-                break;
-            default:
-                moveJugador.innerHTML = " ";
-                break;
-        }
+/*         jugador = parseInt(document.querySelector(".input").value); */
+        jugadorMovimiento()
 
         let computador = Math.floor(Math.random() * 3)+1;
-        switch (computador) {
-            case 1:
-                moveComputadora.innerHTML = "🥌<br>piedra";
-                break;
-            case 2:
-                moveComputadora.innerHTML = "🧻<br>papel";
-                break;
-            case 3:
-                moveComputadora.innerHTML = "✂<br>tijera";
-                break;
-            default:
-                moveComputadora.innerHTML = " ";
-                break;
-        }
+        computadorMovimiento(computador)
 
         if ((jugador == 1 && computador == 2) || (jugador == 2 && computador == 3) || (jugador == 3 && computador == 1)) {
             resultado. innerHTML ="Perdiste!<br>😔";
