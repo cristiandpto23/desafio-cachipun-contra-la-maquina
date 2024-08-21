@@ -31,19 +31,16 @@ function rondas() {
 
 function jugarUno() {
     jugador = parseInt(document.querySelector(".input-1").value);
-    final();
     proceso();
 }
 
 function jugarDos() {
     jugador = parseInt(document.querySelector(".input-2").value);
-    final();
     proceso();
 }
 
 function jugarTres() {
     jugador = parseInt(document.querySelector(".input-3").value);
-    final();
     proceso();
 }
 
@@ -113,7 +110,7 @@ function proceso() {
         }
         intentos--;
         scoreIntentos.innerHTML = intentos;
-
+        final();
     }
 }
 
