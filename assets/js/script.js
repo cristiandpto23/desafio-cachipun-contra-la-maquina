@@ -123,7 +123,7 @@ function final() {
         } else {
             scoreFinal = "empataste el juego 😐";
         }
-        scoreGlobal.innerHTML = `Se acabaron los intentos,<br>ya ${scoreFinal}`;
+        scoreGlobal.innerHTML = `Se acabaron los intentos,<br>${scoreFinal}`;
         jugadasContainer.style.display = "none";
         resetBtn.removeAttribute("disabled");
         /* resetBtn.style.display = "block"; */
